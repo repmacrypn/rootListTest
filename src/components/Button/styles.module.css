@@ -1,0 +1,19 @@
+.button {
+    padding: 10px;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 8px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+}
+
+.submitButton {
+    border-color: green;
+}
+
+.declineButton {
+    border-color: red;
+}
