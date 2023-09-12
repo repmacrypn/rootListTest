@@ -11,7 +11,7 @@ import { IModalProps } from 'src/types/modalTypes'
 import styles from '../styles.module.css'
 
 export const AddModal = ({ listTree, handleTreeUpdate, setIsModalVisible }: IModalProps) => {
-    const [value, setValue] = useState(listTree?.name || '')
+    const [value, setValue] = useState('')
     const [isLoading, setIsLoading] = useState(false)
 
     const handleInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {

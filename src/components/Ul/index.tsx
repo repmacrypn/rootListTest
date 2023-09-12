@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import { useState, useCallback } from 'react'
+/* import { useState, useCallback } from 'react' */
 import { ChevronRight, ChevronDown, Plus, Pencil, Trash } from 'tabler-icons-react'
 
 import { ITree } from 'src/types/responses/tree'
@@ -9,9 +9,10 @@ import { ChangeModal } from '../Modal/ChangeModal'
 import { DeleteModal } from '../Modal/DeleteModal'
 
 import styles from './styles.module.css'
+import { useListControl } from 'src/hooks/useListControl'
 
 export const Ul = ({ listTree, handleTreeUpdate }: { listTree: ITree | null; handleTreeUpdate: () => void }) => {
-    const [areChildrenVisivle, setAreChildrenVisivle] = useState(false)
+    /* const [areChildrenVisivle, setAreChildrenVisivle] = useState(false)
 
     const [isModalVisible, setIsModalVisible] = useState({ type: 'none' })
 
@@ -33,7 +34,17 @@ export const Ul = ({ listTree, handleTreeUpdate }: { listTree: ITree | null; han
     const handleDeleteFieldClick = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
         e.stopPropagation()
         setIsModalVisible({ type: 'delete' })
-    }
+    } */
+
+    const {
+        areChildrenVisivle,
+        isModalVisible,
+        handleAddFieldClick,
+        handleChangeFieldClick,
+        handleDeleteFieldClick,
+        handleNodeClick,
+        setIsModalVisible,
+    } = useListControl()
 
     let modal
 
