@@ -1,0 +1,13 @@
+.list {
+    margin: 10px 20px;
+    font-size: 20px;
+}
+
+.name {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.icon {
+    overflow: visible;
+}
