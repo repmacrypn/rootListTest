@@ -1,7 +1,7 @@
+import { ActionType } from 'src/types/actionTypes'
+
 export interface IDeclineButton {
-    setIsModalVisible: React.Dispatch<React.SetStateAction<{
-        type: string;
-    }>>;
+    setIsModalVisible: React.Dispatch<React.SetStateAction<ActionType>>;
 }
 
 export interface ISubmitButton {

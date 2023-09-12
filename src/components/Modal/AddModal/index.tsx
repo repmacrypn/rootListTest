@@ -27,7 +27,7 @@ export const AddModal = ({ listTree, handleTreeUpdate, setIsModalVisible }: IMod
             alert(e)
         } finally {
             setIsLoading(false)
-            setIsModalVisible({ type: 'none' })
+            setIsModalVisible('none')
         }
     }
 

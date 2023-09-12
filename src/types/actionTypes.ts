@@ -1,0 +1,1 @@
+export type ActionType = 'none' | 'add' | 'delete' | 'change'

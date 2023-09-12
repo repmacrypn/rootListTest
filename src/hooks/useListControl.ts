@@ -1,10 +1,11 @@
 import { useState, useCallback } from 'react'
 
 import { IListControlResult } from 'src/types/IListControlResult'
+import { ActionType } from 'src/types/actionTypes'
 
 export const useListControl = (): IListControlResult => {
     const [areChildrenVisivle, setAreChildrenVisivle] = useState(false)
-    const [isModalVisible, setIsModalVisible] = useState({ type: 'none' })
+    const [isModalVisible, setIsModalVisible] = useState<ActionType>('none')
 
     const handleNodeClick = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         e.stopPropagation()
@@ -13,17 +14,17 @@ export const useListControl = (): IListControlResult => {
 
     const handleAddFieldClick = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
         e.stopPropagation()
-        setIsModalVisible({ type: 'add' })
+        setIsModalVisible('add')
     }
 
     const handleChangeFieldClick = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
         e.stopPropagation()
-        setIsModalVisible({ type: 'change' })
+        setIsModalVisible('change')
     }
 
     const handleDeleteFieldClick = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
         e.stopPropagation()
-        setIsModalVisible({ type: 'delete' })
+        setIsModalVisible('delete')
     }
 
     return {

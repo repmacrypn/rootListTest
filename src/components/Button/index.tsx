@@ -17,7 +17,7 @@ export const DeclineButton = ({ setIsModalVisible }: IDeclineButton) => {
     return (
         <button
             className={`${styles.button} ${styles.declineButton}`}
-            onClick={() => setIsModalVisible({ type: 'none' })}>
+            onClick={() => setIsModalVisible('none')}>
             CANCEL
         </button>
     )

@@ -1,8 +1,9 @@
 import axios from 'axios'
+
 import { ITree } from 'src/types/responses/tree'
 
 export const API_URL = 'https://test.vmarmysh.com/'
-export const TREE_NAME = 'qwqefdddd'
+export const TREE_NAME = 'los pollos hermanos'
 
 const instance = axios.create({
     baseURL: API_URL,

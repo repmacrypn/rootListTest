@@ -3,9 +3,10 @@ import { Modal } from 'src/components/Modal'
 import { AddModal } from 'src/components/Modal/AddModal'
 import { ChangeModal } from 'src/components/Modal/ChangeModal'
 import { DeleteModal } from 'src/components/Modal/DeleteModal'
-import { IModalProps } from 'src/types/modalTypes'
 
-export const CurrentModal = ({ type, setIsModalVisible, handleTreeUpdate, listTree }: IModalProps & { type: string }) => {
+import { ICurrentModal } from './interface'
+
+export const CurrentModal = ({ type, setIsModalVisible, handleTreeUpdate, listTree }: ICurrentModal) => {
     switch (type) {
         case 'add': {
             return (

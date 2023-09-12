@@ -1,13 +1,14 @@
 import { ChevronRight, ChevronDown, Plus, Pencil, Trash } from 'tabler-icons-react'
 
-import { CurrentModal } from '../Modal/CurrentModal'
+import { CurrentModal } from 'src/components/Modal/CurrentModal'
 
 import styles from './styles.module.css'
 
 import { ITree } from 'src/types/responses/tree'
 import { useListControl } from 'src/hooks/useListControl'
+import { IUl } from './interface'
 
-export const Ul = ({ listTree, handleTreeUpdate }: { listTree: ITree | null; handleTreeUpdate: () => void }) => {
+export const Ul = ({ listTree, handleTreeUpdate }: IUl) => {
     const {
         areChildrenVisivle,
         isModalVisible,
@@ -22,7 +23,7 @@ export const Ul = ({ listTree, handleTreeUpdate }: { listTree: ITree | null; han
         handleTreeUpdate={handleTreeUpdate}
         listTree={listTree}
         setIsModalVisible={setIsModalVisible}
-        type={isModalVisible.type}
+        type={isModalVisible}
     />
 
     return (
